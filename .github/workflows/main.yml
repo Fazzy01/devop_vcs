@@ -2,8 +2,8 @@ on:
   pull_request:
     branches:
       - main
-    types:
-      - closed  # only trigger on PR merge
+    #types:
+     # - closed  # only trigger on PR merge
 
 jobs:
 
@@ -26,7 +26,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Upload pages artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v1 #actions/upload-artifact@v4
         with:
           name: github-pages
           path: ./
