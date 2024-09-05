@@ -30,7 +30,7 @@ jobs:
         with:
           name: github-pages
           # Upload entire repository
-          path: './'
+          path: ./
 
       - name: Deploy to GitHub Pages
         id: deployment
