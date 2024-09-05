@@ -10,7 +10,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Deploy to GitHub Pages
-        uses: gh-pages/deploy@v1
+        uses: github-pages/deploy@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           remote_branch: main
