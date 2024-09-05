@@ -21,6 +21,14 @@ jobs:
     # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Upload pages artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: ./
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4.0.5 # or specific "vX.X.X" version tag for this actio
