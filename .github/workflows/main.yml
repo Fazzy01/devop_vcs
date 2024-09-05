@@ -2,8 +2,8 @@ on:
   pull_request:
     branches:
       - main
-    #types:
-     # - closed  # only trigger on PR merge
+    types:
+     - closed  # only trigger on PR merge
 
 jobs:
 
@@ -35,6 +35,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4.0.5 # or specific "vX.X.X" version tag for this action latest is 4.0.5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          target-branch: main  # deploy to main branch
