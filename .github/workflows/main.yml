@@ -26,7 +26,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v1 #actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v2 #actions/upload-artifact@v4
         with:
           name: github-pages
           path: ./
