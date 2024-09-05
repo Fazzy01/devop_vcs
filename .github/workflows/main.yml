@@ -26,11 +26,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v2 #actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3 #actions/upload-artifact@v4
         with:
           name: github-pages
-          path: ./
+          # Upload entire repository
+          path: './'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4.0.5 # or specific "vX.X.X" version tag for this actio
+        uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action latest is 4.0.5
